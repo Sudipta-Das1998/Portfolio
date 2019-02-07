@@ -10,6 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>My Portfolio</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -27,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header">
 		<div class="container">
 			<div class="header-profile">
-				<img src="images/profile.png" alt=""/>
+				<img src="images/profile_1.jpg" alt="" style="border-radius:50%; border: 5px solid #fff;" />
 			</div>
 		</div>
 	</div>
@@ -65,7 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li><i class="travel"></i></li>
 							
 						</ul>
-						<a href="" class="download"><span></span>Download Resume</a>
+						<a href="resume_sudipta.pdf" target="_blank" class="download"><span></span>Download Resume</a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -122,6 +123,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="skills-top">
 				<h3 class="top-title">Skills</h3>
 				<span class="line"></span>
+				<p class="text-center">My Top Skills</p>
 				<div class="row skill-grids text-center">
 									<div class="col-md-3 skill-column">	
 										<div class="skill-grid">
@@ -204,15 +206,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="clearfix"></div>
 				</div>
-				<form class="contact-form">
+				<form class="contact-form" action="https://formspree.io/sudiptagudlu.das@gmail.com" method="POST">
 					<div class="text">
-						<input type="text" value="Your Name.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name..';}"/>
+						<input required="true" type="text" name="Name" placeholder="Enter name"/>
 					</div>
 					<div class="text">
-						<input type="text" value="Your Email.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email..';}"/>
+						<input required="true" type="text" name="Email" placeholder="Enter email"/>
 					</div>
 					<div class="text">
-						<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Your Message..</textarea>
+						<textarea required="true" name="Message" placeholder="Enter Message">Your Message..</textarea>
 					</div>
 					<div class="text">
 						<input type="submit"/>
@@ -229,13 +231,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<h3 class="top-title">SOCIAL MEDIA CONNECTIONS</h3>
 				<span class="line"></span>
 				<ul class="social">
-					<li><i class="fb"></i></li>
-					<!--<li><i class="tw"></i></li>-->
-					<li><i class="li"></i></li>
-					<!--<li><i class="yt"></i></li>-->
-					<li><i class="ca"></i></li>
-					<!--<li><i class="ph"></i></li>-->
-					<!--<li><i class="gp"></i></li>-->
+					<a href="https://www.facebook.com/profile.php?id=100008740149956" target="_blank"><li><i class="fb"></i></li></a>
+				
+					<a href="https://www.linkedin.com/in/sudipta-das-501b6b121/" target="_blank"><li><i class="li"></i></li></a>
+				
+					<a href="https://github.com/Sudipta-Das1998" target="_blank"><li><i class="ca"></i></li></a>
+				
 				</ul>
 			</div>
 		</div>
@@ -244,10 +245,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--- Footer Starts Here ---->
 	<div class="footer">
 		<div class="container">
-			<p class="copyright">2014 Template By <a href="http://w3layouts.com">W3layouts</a></p>
+			
+			<p class="copyright">&copy; Copyright <span id="cp_date"></span></a></p>
 		</div>
 	</div>
 	<!--- Footer Ends Here ---->
+	<script>
+		const d = new Date();
+		document.getElementById("cp_date").innerHTML = d.getFullYear();
+	</script>
 </body>
 </html>
 
