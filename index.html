@@ -126,28 +126,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<div class="col-md-3 skill-column">	
 										<div class="skill-grid">
 											<div class="circle" id="circles-1"></div>									
-											 <h3>C++</h3>	
-											 <p></p>
-										 </div>								  
-									</div>
-									<div class="col-md-3 skill-column">	
-										<div class="skill-grid">
-											<div class="circle" id="circles-2"></div>									
-											 <h3>ROBOT FRAMEWORK</h3>	
-											 <p></p>
-										 </div>								  
-									</div>
-									<div class="col-md-3 skill-column">	
-										<div class="skill-grid">
-											<div class="circle" id="circles-3"></div>									
 											 <h3>PYTHON</h3>	
 											 <p></p>
 										 </div>								  
 									</div>
 									<div class="col-md-3 skill-column">	
 										<div class="skill-grid">
+											<div class="circle" id="circles-2"></div>									
+											 <h3>INTERNET OF THINGS</h3>	
+											 <p></p>
+										 </div>								  
+									</div>
+									<div class="col-md-3 skill-column">	
+										<div class="skill-grid">
+											<div class="circle" id="circles-3"></div>									
+											 <h3>C++</h3>	
+											 <p></p>
+										 </div>								  
+									</div>
+									<div class="col-md-3 skill-column">	
+										<div class="skill-grid">
 											<div class="circle" id="circles-4"></div>									
-											 <h3>INTERNET OF THINGS </h3>
+											 <h3>ROBOT FRAMEWORK</h3>
 											 <p></p>	
 										 </div>								  
 									</div>
@@ -163,14 +163,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										];
 									for (var i = 1; i <= 6; i++) {
 										var child = document.getElementById('circles-' + i),
-											percentage = 50 + (i * 10);
+											percentage = 40 + (i * 10);
 											
 										Circles.create({
 											id:         child.id,
 											percentage: percentage,
 											radius:     80,
 											width:      15,
-											number:   	percentage / 10,
+											number:   	percentage,
 											text:       '%',
 											colors:     colors[i - 1]
 										});
